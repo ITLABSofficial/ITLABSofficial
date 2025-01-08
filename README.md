@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @ITLABSofficial
 - 👀 I’m interested in micro assmblyy silicat chip
-- 🌱 I’m currently learning c++ ,assmbly and python
+- 🌱 I’m currently learning c++ ,assmbly ,java and python
 - 💞️ I’m looking to collaborate on ...NOT
 - 📫 How to reach me ... NOT (I will find you) 
 - 😄 Pronouns: ...NOT
