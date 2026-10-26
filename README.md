@@ -23,16 +23,16 @@ Our open-source hardware stack spans sequentially from the physical sub-nanomete
        └───> [08: 16,384-Core Wafer Scale Engine]   (300mm Monolithic Supercomputer)
 ```
 
-| Layer | Architecture Component | GitHub Repository | Primary Specifications & Capabilities | Synthesis / Target |
-|:---:|:---|:---|:---|:---:|
-| **01** | **Physical Layer (PHY)** | [**`Open_HBM3_PHY`**](https://github.com/ITLABSofficial/Open_HBM3_PHY) | 1.18 TB/s HBM3E PHY, 8:1 SerDes Gearbox, DFE/CTLE, 4.6 GHz WCK, DFI 5.0 | TSMC N5 / ASAP7 |
-| **02** | **Memory Controller** | [**`Open_HBM3_Controller`**](https://github.com/ITLABSofficial/Open_HBM3_Controller) | 16-Pseudo-Channel DFI 5.0 Controller, SECDED ECC, Bank Interleaving | Synthesizable RTL |
-| **03** | **Near-Memory PIM** | [**`OpenHBM3_PIM_Subsystem`**](https://github.com/ITLABSofficial/OpenHBM3_PIM_Subsystem) | 3.2 TB/s Base-Die PIM Engine, FlashAttention, RMSNorm, True-FMA | Base-Die Silicon |
-| **04** | **Compute Core** | [**`Ara_Core_TrueFMA_Systolic`**](https://github.com/ITLABSofficial/Ara_Core_TrueFMA_Systolic) | 16x16 Systolic Array & 6-Stage 2.0 GHz True-FMA (1.024 TFLOPS FP16) | RISC-V Vector 1.0 |
-| **05** | **Cluster Interconnect** | [**`Ara_Cluster_TCDM_NoC`**](https://github.com/ITLABSofficial/Ara_Cluster_TCDM_NoC) | 4-Core Vector Cluster, 32-Bank TCDM SRAM (256 GB/s), 5-Port VC Router | TCDM / Wormhole |
-| **06** | **Multicore SoC** | [**`Ara_16Core_2x2_SoC`**](https://github.com/ITLABSofficial/Ara_16Core_2x2_SoC) | 16-Core GALS NoC Multicore SoC, 4-Zone PDN Stagger, Linux C Driver | GALS CDC Mesh |
-| **07** | **Board / Accelerator** | [**`Ara_PCIe_AI_Accelerator_64Core`**](https://github.com/ITLABSofficial/Ara_PCIe_AI_Accelerator_64Core) | 64-Core PCIe Gen5 x16 AI Accelerator Card, 128 GB HBM3e (229W TDP) | PCIe Gen5 Card |
-| **08** | **Wafer-Scale Engine** | [**`WSE_16K_Wafer_Scale_Engine`**](https://github.com/ITLABSofficial/WSE_16K_Wafer_Scale_Engine) | 300mm Monolithic 16,384-Core Wafer Engine, 48x HBM3 (1.15 TB), 15 kW | 300mm Wafer |
+| Layer | Architecture Component | GitHub Repository | Peer-Reviewed Paper | Primary Specifications | Synthesis / Target |
+|:---:|:---|:---|:---|:---|:---:|
+| **01** | **Physical Layer (PHY)** | [**`Open_HBM3_PHY`**](https://github.com/ITLABSofficial/Open_HBM3_PHY) | [📄 **Paper**](https://github.com/ITLABSofficial/Open_HBM3_PHY/blob/main/PAPER.md) | 1.18 TB/s HBM3E PHY, 8:1 SerDes, DFE/CTLE, 4.6 GHz WCK, DFI 5.0 | TSMC N5 / ASAP7 |
+| **02** | **Memory Controller** | [**`Open_HBM3_Controller`**](https://github.com/ITLABSofficial/Open_HBM3_Controller) | [📄 **Paper**](https://github.com/ITLABSofficial/Open_HBM3_Controller/blob/main/PAPER.md) | 16-Pseudo-Channel DFI 5.0 Controller, SECDED ECC, Bank Interleave | Synthesizable RTL |
+| **03** | **Near-Memory PIM** | [**`OpenHBM3_PIM_Subsystem`**](https://github.com/ITLABSofficial/OpenHBM3_PIM_Subsystem) | [📄 **Paper**](https://github.com/ITLABSofficial/OpenHBM3_PIM_Subsystem/blob/main/PAPER.md) | 3.2 TB/s Base-Die PIM Engine, FlashAttention, RMSNorm, True-FMA | Base-Die Silicon |
+| **04** | **Compute Core** | [**`Ara_Core_TrueFMA_Systolic`**](https://github.com/ITLABSofficial/Ara_Core_TrueFMA_Systolic) | [📄 **Paper**](https://github.com/ITLABSofficial/Ara_Core_TrueFMA_Systolic/blob/main/PAPER.md) | 16x16 Systolic Array & 6-Stage 2.0 GHz True-FMA (1.024 TFLOPS) | RISC-V Vector 1.0 |
+| **05** | **Cluster Interconnect** | [**`Ara_Cluster_TCDM_NoC`**](https://github.com/ITLABSofficial/Ara_Cluster_TCDM_NoC) | [📄 **Paper**](https://github.com/ITLABSofficial/Ara_Cluster_TCDM_NoC/blob/main/PAPER.md) | 4-Core Vector Cluster, 32-Bank TCDM SRAM, 5-Port VC Router | TCDM / Wormhole |
+| **06** | **Multicore SoC** | [**`Ara_16Core_2x2_SoC`**](https://github.com/ITLABSofficial/Ara_16Core_2x2_SoC) | [📄 **Paper**](https://github.com/ITLABSofficial/Ara_16Core_2x2_SoC/blob/main/PAPER.md) | 16-Core GALS NoC Multicore SoC, 4-Zone PDN Stagger, Linux Driver | GALS CDC Mesh |
+| **07** | **Board / Accelerator** | [**`Ara_PCIe_AI_Accelerator_64Core`**](https://github.com/ITLABSofficial/Ara_PCIe_AI_Accelerator_64Core) | [📄 **Paper**](https://github.com/ITLABSofficial/Ara_PCIe_AI_Accelerator_64Core/blob/main/PAPER.md) | 64-Core PCIe Gen5 x16 AI Accelerator, 128 GB HBM3e (229W TDP) | PCIe Gen5 Card |
+| **08** | **Wafer-Scale Engine** | [**`WSE_16K_Wafer_Scale_Engine`**](https://github.com/ITLABSofficial/WSE_16K_Wafer_Scale_Engine) | [📄 **Paper**](https://github.com/ITLABSofficial/WSE_16K_Wafer_Scale_Engine/blob/main/PAPER.md) | 300mm Monolithic 16,384-Core Wafer, 48x HBM3 (1.15 TB), 15 kW | 300mm Wafer |
 
 ---
 
